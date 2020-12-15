@@ -274,11 +274,20 @@ func cmddownloads(i []string) {
 func cmdrms(i []string) {
 	for _, str := range i {
 		vds_database_del(str)
+		fmt.Println(str,"deleted")
 	}
+
 }
 func cmdputs(i []string) {
+	key :=i[0]
+	value :=strings.Join(i[1:]," ")
+	vds_database_put(key,value)
 }
 func cmdgets(i []string) {
+	for _, str := range i {
+		value:=vds_database_get(str)
+		fmt.Println(value)
+	}
 }
 func cmdq() {
 	vds_database_close()
