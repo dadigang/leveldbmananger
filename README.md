@@ -8,7 +8,7 @@
 
 #### 安装教程
 
-1.  git clone https://gitee.com/dadigang/leveldbmanager
+1.  git clone https://github.com/dadigang/leveldbmanager
 2.  cd leveldbmanager
 3.  go build
 
